@@ -1,3 +1,9 @@
+<?php
+  session_start();
+
+?>
+
+
 <!doctype html>
 <html lang="en">
    <head>
@@ -29,51 +35,16 @@
          <div class="container">
             <div class="form-group">
                <div class="input-group mb-3"></div>
+               <h1>Login For Tenant</h1>
                <form action="note.php" method="POST">
                   <div class="form-group">
-                    <label for="exampleFormControlInput1">Nama Event</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1">
+                    <label for="exampleFormControlInput1">Username</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1">            <!-- input -->
                   </div>
                   <div class="form-group">
-                    <label for="exampleFormControlInput2">Email</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="name@example.com">
+                    <label for="exampleFormControlInput2">Password</label>
+                    <input type="password" class="form-control" id="exampleFormControlInput2">        <!-- input -->
                   </div>
-                  <div class="form-group">
-                    <label for="exampleFormControlInput3">Lokasi</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput3">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleFormControlInput4">Nomor Telepon</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput4">
-                  </div>
-                  <div class="form-group row">
-                    <label for="example-date-input" class="col-2 col-form-label">Tanggal Mulai</label>
-                    <div class="col-10">
-                      <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label for="example-date-input2" class="col-2 col-form-label">Tanggal Selesai</label>
-                    <div class="col-10">
-                      <input class="form-control" type="date" value="2011-08-19" id="example-date-input2">
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label for="example-time-input" class="col-2 col-form-label">Jam</label>
-                    <div class="col-10">
-                      <input class="form-control" type="time" value="13:45:00" id="example-time-input">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Deskripsi</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                  </div>
-
-
-
-
-
-
                   <button type="submit" class="btn btn-info">Submit</button>
                </form>
                <div class="input-group mb-3"></div>

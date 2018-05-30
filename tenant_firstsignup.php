@@ -8,6 +8,8 @@
   $hashresult= password_hash('becak', PASSWORD_BCRYPT);
   $query = "INSERT INTO tenant_login VALUES('apapapap', '$hashresult')";
   mysqli_query($DB, $query);
+  $query = "INSERT INTO tenant VALUES('apapapap', '$hashresult')";
+  mysqli_query($DB, $query);
 	//$DB->query($query);
 ?>
 

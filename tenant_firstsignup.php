@@ -1,19 +1,3 @@
-<?php
-  session_start();
-  require_once 'db.php';
-
-  $username=htmlentities(@$_POST["tenantusername"]);
-  $password=htmlentities(@$_POST["tenantpassword"]);
-
-  $hashresult= password_hash('becak', PASSWORD_BCRYPT);
-  $query = "INSERT INTO tenant_login VALUES('apapapap', '$hashresult')";
-  mysqli_query($DB, $query);
-  $query = "INSERT INTO tenant VALUES('apapapap', '$hashresult')";
-  mysqli_query($DB, $query);
-	//$DB->query($query);
-?>
-
-
 <!doctype html>
 <html lang="en">
    <head>

@@ -1,10 +1,3 @@
-<?php
-  session_start();
-  $_SESSION["eventid"];
-
-
-?>
-
 <!doctype html>
 <html lang="en">
    <head>

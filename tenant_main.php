@@ -54,6 +54,7 @@
                </ul>
                <div class="card-body text-center">
                  <a href="#" class="btn btn-primary">Lihat Detail</a>
+                 <a href="#" class="btn btn-primary">Give Feedback</a>
                </div>
               </div>
 
@@ -110,6 +111,7 @@
                </ul>
                <div class="card-body text-center">
                  <a href="#" class="btn btn-primary">Lihat Detail</a>
+                                  <a href="#" class="btn btn-primary">Give Feedback</a>
                </div>
               </div>
 

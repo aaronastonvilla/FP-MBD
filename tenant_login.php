@@ -58,13 +58,14 @@
                     <?php
                   }
                   else{
-                    $sql = mysqli_query($db,"select * from tenant_login where tl_user='$user' and tl_pwd='$pass'") or die ($db->error); 
+                    $sql = mysqli_query($db,"select * from tenant_login where tl_user='$user' and tl_pwd='$pass'") or die ($db->error);
                     $data = mysqli_fetch_array($sql, MYSQLI_ASSOC);
                     $cek = mysqli_num_rows($sql);
                     if($cek>=1){
                       ?>
                       <script type="text/javascript">alert("Sukses Login")</script> <!-- nyelipkan alert js -->
-                      <?php  
+                      <?php
+                      header('Location: tenant_main.php'); 
                     }
                     else{
                       ?>

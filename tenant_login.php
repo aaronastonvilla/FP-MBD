@@ -1,3 +1,7 @@
+<?php
+  include "db.php"
+?>
+
 <!doctype html>
 <html lang="en">
    <head>
@@ -13,7 +17,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
       <script src="js.js"></script>
-      <title>Note by Aufa Wibowo</title>
+      <title>Tenant Login</title>
    </head>
    <body class="bg-light text-dark">
       <nav class="navbar navbar-dark bg-primary">
@@ -31,17 +35,45 @@
             <div class="form-group">
                <div class="input-group mb-3"></div>
                <h1>Login For Tenant</h1>
-               <form action="note.php" method="POST">
+               <form action="" method="POST">
                   <div class="form-group">
                     <label for="exampleFormControlInput1">Username</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1">            <!-- input -->
+                    <input type="text" name="tenantusername" class="form-control" id="exampleFormControlInput1">            <!-- input -->
                   </div>
                   <div class="form-group">
                     <label for="exampleFormControlInput2">Password</label>
-                    <input type="password" class="form-control" id="exampleFormControlInput2">        <!-- input -->
+                    <input type="password" name="tenantpassword" class="form-control" id="exampleFormControlInput2">        <!-- input -->
                   </div>
-                  <button type="submit" class="btn btn-info">Submit</button>
+                  <input type="submit" name="login" value="Login" class="btn btn-info">
                </form>
+               </form>
+               <?php
+                $user = @$_POST['tenantusername'];
+                $pass = @$_POST['tenantpassword'];
+                $login = @$_POST['login'];
+                if($login){
+                  if($user=="" || $pass==""){
+                    ?>
+                    <script type="text/javascript">alert("Username/Password tidak boleh kosong")</script> <!-- nyelipkan alert js -->
+                    <?php
+                  }
+                  else{
+                    $sql = mysqli_query($db,"select * from tenant_login where tl_user='$user' and tl_pwd='$pass'") or die ($db->error); 
+                    $data = mysqli_fetch_array($sql, MYSQLI_ASSOC);
+                    $cek = mysqli_num_rows($sql);
+                    if($cek>=1){
+                      ?>
+                      <script type="text/javascript">alert("Sukses Login")</script> <!-- nyelipkan alert js -->
+                      <?php  
+                    }
+                    else{
+                      ?>
+                      <script type="text/javascript">alert("Username/Password salah")</script> <!-- nyelipkan alert js -->
+                      <?php
+                    }
+                  }
+                }
+              ?>
                <div class="input-group mb-3"></div>
             </div>
           </div>

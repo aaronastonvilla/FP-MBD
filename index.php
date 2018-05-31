@@ -93,7 +93,7 @@
                                        </div>
                                        <div class="tab-content-inner" data-content="login">
 																				<a type="button" href="tenant_login.php" class="btn btn-default">Tenant</a>
- 																				<a type="button" href="event_firstsignup.php" class="btn btn-default">Event</a>
+ 																				<a type="button" href="event_login.php" class="btn btn-default">Event</a>
                                        </div>
                                     </div>
                                  </div>

@@ -1,5 +1,5 @@
 <?php
-	$DB = new mysqli('localhost','root',NULL,'fpmbd');
-	if($DB->error)
-		echo $DB->error;
+	$db = mysqli_connect("localhost", "root", "", "fpmbd");
+	if($db->error)
+		echo $db->error;
 ?>

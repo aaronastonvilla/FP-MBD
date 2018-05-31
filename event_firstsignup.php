@@ -1,3 +1,7 @@
+<?php
+  include "db.php"
+?>
+
 <!doctype html>
 <html lang="en">
    <head>
@@ -13,7 +17,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
       <script src="js.js"></script>
-      <title>Note by Aufa Wibowo</title>
+      <title>Event Sign Up</title>
    </head>
    <body>
       <nav class="navbar navbar-dark bg-primary">
@@ -31,7 +35,7 @@
             <div class="form-group">
                <div class="input-group mb-3"></div>
                <h1>Sign Up First!</h1>
-               <form action="note.php" method="POST">
+               <form action="" method="POST">
                   <div class="form-group">
                     <label for="exampleFormControlInput1">Username</label>
                     <input name="eventusername" type="text" class="form-control" id="exampleFormControlInput1">       <!-- input -->
@@ -42,10 +46,35 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleFormControlInput3">Retype Password</label>
-                    <input type="password" class="form-control" id="exampleFormControlInput3">                        <!-- input -->
+                    <input name="repassword" type="password" class="form-control" id="exampleFormControlInput3">                        <!-- input -->
                   </div>
-                  <button type="submit" class="btn btn-info">Submit</button>
+                  <input name="submit" type="submit" class="btn btn-info">
                </form>
+               <?php
+                $user = @$_POST['eventusername'];
+                $pass = @$_POST['eventpassword'];
+                $submit = @$_POST['submit'];
+                if($submit){
+                  if($user=="" || $pass==""){
+                    ?>
+                    <script type="text/javascript">alert("Username/Password tidak boleh kosong")</script> <!-- nyelipkan alert js -->
+                    <?php
+                  }
+                  else{
+                    $sql = mysqli_query($db,"select * from event_login where el_user='$user'") or die ($db->error); 
+                    $data = mysqli_fetch_array($sql, MYSQLI_ASSOC);
+                    $cek = mysqli_num_rows($sql);
+                    if($cek>=1){
+                      ?>
+                      <script type="text/javascript">alert("Username ini sudah digunakan, silahkan gunakan username yang lain")</script> <!-- nyelipkan alert js -->
+                      <?php  
+                    }
+                    else{
+                      mysqli_query($db,"insert into event_login (el_user, el_pwd) values ('$user', '$pass')") or die ($db->error);
+                    }
+                  }
+                }
+              ?>
                <div class="input-group mb-3"></div>
             </div>
           </div>

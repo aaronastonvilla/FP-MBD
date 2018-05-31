@@ -57,85 +57,97 @@
                </div>
               </div>
 
-              <div class="card" style="width: 18rem;">
-
-                <div class="card-img-top text-white" style="background-color: #<?php echo random_color(); ?>;">
-                  <div class="card-body"><h5 class="card-title">Festival Rujak Surabaya</h5></div>
-                </div>
-                <!--<img class="card-img-top" src="https://www.picmonkey.com/blog/wp-content/uploads/2016/08/city-bokeh-resize.jpg" alt="Card image cap">-->
+              <div class="card">
                 <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <h5 class="card-title">Kebab Turki Baba Rafi</h5>
+                  <p class="card-text">Event tepat waktu acara ramai cuma meme kurang banyak.</p>
+                  <p class="card-text"><small class="text-muted">3 out of 5 star</small></p>
                 </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Jalan Pemuda</li>
-                  <li class="list-group-item"><a href="#">mail@festivalrujak.com</a></li>
-                  <li class="list-group-item">20 Januari 2018- 22 Januari 2018</li>
-                </ul>
-                <div class="card-body text-center">
-                  <a href="#" class="btn btn-primary">Lihat Detail</a>
+              </div>
+
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">McDonald Indonesia</h5>
+                  <p class="card-text">Ngikut apa kata orang aja.</p>
+                  <p class="card-text"><small class="text-muted">1 out of 5 star</small></p>
                 </div>
-               </div>
+              </div>
 
-               <div class="card" style="width: 18rem;">
-
-                 <div class="card-img-top text-white" style="background-color: #<?php echo random_color(); ?>;">
-                   <div class="card-body"><h5 class="card-title">Festival Rujak Surabaya</h5></div>
-                 </div>
-                 <!--<img class="card-img-top" src="https://www.picmonkey.com/blog/wp-content/uploads/2016/08/city-bokeh-resize.jpg" alt="Card image cap">-->
-                 <div class="card-body">
-                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                 </div>
-                 <ul class="list-group list-group-flush">
-                   <li class="list-group-item">Jalan Pemuda</li>
-                   <li class="list-group-item"><a href="#">mail@festivalrujak.com</a></li>
-                   <li class="list-group-item">20 Januari 2018- 22 Januari 2018</li>
-                 </ul>
-                 <div class="card-body text-center">
-                   <a href="#" class="btn btn-primary">Lihat Detail</a>
-                 </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Pedagang Rujak Cingur</h5>
+                  <p class="card-text">Sepi dagangan saya.</p>
+                  <p class="card-text"><small class="text-muted">4 out of 5 star</small></p>
                 </div>
+              </div>
 
-                <div class="card" style="width: 18rem;">
-
-                  <div class="card-img-top text-white" style="background-color: #<?php echo random_color(); ?>;">
-                    <div class="card-body"><h5 class="card-title">Festival Rujak Surabaya</h5></div>
-                  </div>
-                  <!--<img class="card-img-top" src="https://www.picmonkey.com/blog/wp-content/uploads/2016/08/city-bokeh-resize.jpg" alt="Card image cap">-->
-                  <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Jalan Pemuda</li>
-                    <li class="list-group-item"><a href="#">mail@festivalrujak.com</a></li>
-                    <li class="list-group-item">20 Januari 2018- 22 Januari 2018</li>
-                  </ul>
-                  <div class="card-body text-center">
-                    <a href="#" class="btn btn-primary">Lihat Detail</a>
-                  </div>
-                 </div>
-
-                 <div class="card" style="width: 18rem;">
-
-                   <div class="card-img-top text-white" style="background-color: #<?php echo random_color(); ?>;">
-                     <div class="card-body"><h5 class="card-title">Festival Rujak Surabaya</h5></div>
-                   </div>
-                   <!--<img class="card-img-top" src="https://www.picmonkey.com/blog/wp-content/uploads/2016/08/city-bokeh-resize.jpg" alt="Card image cap">-->
-                   <div class="card-body">
-                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                   </div>
-                   <ul class="list-group list-group-flush">
-                     <li class="list-group-item">Jalan Pemuda</li>
-                     <li class="list-group-item"><a href="#">mail@festivalrujak.com</a></li>
-                     <li class="list-group-item">20 Januari 2018- 22 Januari 2018</li>
-                   </ul>
-                   <div class="card-body text-center">
-                     <a href="#" class="btn btn-primary">Lihat Detail</a>
-                   </div>
-                  </div>
-
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Jualan Aqua</h5>
+                  <p class="card-text">Beuh aqua di monopoli.</p>
+                  <p class="card-text"><small class="text-muted">3 out of 5 star</small></p>
+                </div>
+              </div>
 
 
             </div>
+
+
+            <div class="card-columns mt-3">
+             <div class="card" style="width: 18rem;">
+
+               <div class="card-img-top text-white" style="background-color: #<?php echo random_color(); ?>;">
+                 <div class="card-body"><h5 class="card-title">Festival Rujak Surabaya</h5></div>
+               </div>
+               <!--<img class="card-img-top" src="https://www.picmonkey.com/blog/wp-content/uploads/2016/08/city-bokeh-resize.jpg" alt="Card image cap">-->
+               <div class="card-body">
+                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+               </div>
+               <ul class="list-group list-group-flush">
+                 <li class="list-group-item">Jalan Pemuda</li>
+                 <li class="list-group-item"><a href="#">mail@festivalrujak.com</a></li>
+                 <li class="list-group-item">20 Januari 2018- 22 Januari 2018</li>
+               </ul>
+               <div class="card-body text-center">
+                 <a href="#" class="btn btn-primary">Lihat Detail</a>
+               </div>
+              </div>
+
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Kebab Turki Baba Rafi</h5>
+                  <p class="card-text">Event tepat waktu acara ramai cuma meme kurang banyak.</p>
+                  <p class="card-text"><small class="text-muted">3 out of 5 star</small></p>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">McDonald Indonesia</h5>
+                  <p class="card-text">Ngikut apa kata orang aja.</p>
+                  <p class="card-text"><small class="text-muted">1 out of 5 star</small></p>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Pedagang Rujak Cingur</h5>
+                  <p class="card-text">Sepi dagangan saya.</p>
+                  <p class="card-text"><small class="text-muted">4 out of 5 star</small></p>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Jualan Aqua</h5>
+                  <p class="card-text">Beuh aqua di monopoli.</p>
+                  <p class="card-text"><small class="text-muted">3 out of 5 star</small></p>
+                </div>
+              </div>
+
+
+            </div>
+
 
          </div>
          </div>

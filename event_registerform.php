@@ -37,16 +37,20 @@
                     <input type="text" class="form-control" id="exampleFormControlInput1">                                  <!-- input -->
                   </div>
                   <div class="form-group">
-                    <label for="exampleFormControlInput2">Email</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="name@example.com">  <!-- input -->
+                    <label for="exampleFormControlInput3">Lokasi</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput3">                                  <!-- input -->
                   </div>
                   <div class="form-group">
-                    <label for="exampleFormControlInput3">Lokasi</label>
+                    <label for="exampleFormControlInput3">Kota</label>
                     <input type="text" class="form-control" id="exampleFormControlInput3">                                  <!-- input -->
                   </div>
                   <div class="form-group">
                     <label for="exampleFormControlInput4">Nomor Telepon</label>
                     <input type="text" class="form-control" id="exampleFormControlInput4">                                  <!-- input -->
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlInput2">Email</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="name@example.com">  <!-- input -->
                   </div>
                   <div class="form-group row">
                     <label for="example-date-input" class="col-2 col-form-label">Tanggal Mulai</label>

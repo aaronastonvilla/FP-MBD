@@ -19,7 +19,7 @@
       <script src="js.js"></script>
       <title>Event Sign Up</title>
    </head>
-   <body>
+   <body class="bg-light text-dark">
       <nav class="navbar navbar-dark bg-primary">
          <div class="container">
             <div class="navbar-header">
@@ -61,13 +61,13 @@
                     <?php
                   }
                   else{
-                    $sql = mysqli_query($db,"select * from event_login where el_user='$user'") or die ($db->error); 
+                    $sql = mysqli_query($db,"select * from event_login where el_user='$user'") or die ($db->error);
                     $data = mysqli_fetch_array($sql, MYSQLI_ASSOC);
                     $cek = mysqli_num_rows($sql);
                     if($cek>=1){
                       ?>
                       <script type="text/javascript">alert("Username ini sudah digunakan, silahkan gunakan username yang lain")</script> <!-- nyelipkan alert js -->
-                      <?php  
+                      <?php
                     }
                     else{
                       mysqli_query($db,"insert into event_login (el_user, el_pwd) values ('$user', '$pass')") or die ($db->error);

@@ -13,7 +13,7 @@
 				<script src="js.js"></script>
 				<title>Note by Aufa Wibowo</title>
 			</head>
-			<body>
+			<body class="bg-light text-dark">
 				<nav class="navbar navbar-dark bg-primary">
 					<div class="container">
 						<div class="navbar-header">

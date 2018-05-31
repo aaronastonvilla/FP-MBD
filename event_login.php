@@ -19,7 +19,7 @@
       <script src="js.js"></script>
       <title>Event Login</title>
    </head>
-   <body>
+   <body class="bg-light text-dark">
       <nav class="navbar navbar-dark bg-primary">
          <div class="container">
             <div class="navbar-header">
@@ -57,13 +57,13 @@
                     <?php
                   }
                   else{
-                    $sql = mysqli_query($db,"select * from event_login where el_user='$user' and el_pwd='$pass'") or die ($db->error); 
+                    $sql = mysqli_query($db,"select * from event_login where el_user='$user' and el_pwd='$pass'") or die ($db->error);
                     $data = mysqli_fetch_array($sql, MYSQLI_ASSOC);
                     $cek = mysqli_num_rows($sql);
                     if($cek>=1){
                       ?>
                       <script type="text/javascript">alert("Sukses Login")</script> <!-- nyelipkan alert js -->
-                      <?php  
+                      <?php
                     }
                     else{
                       ?>

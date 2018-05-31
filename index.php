@@ -1,10 +1,4 @@
-<?php
-	session_start();
-	if(!isset($_SESSION['id'])){
-		header('location: login.php');
-		die();
-	}else{
-		header('location: note.php');
-		die();
-	}
-?>
+<a href="event_firstsignup.php">event_firstsignup.php</a>
+<a href="event_login.php">event_login.php</a>
+<a href="event_main.php">event_main.php</a>
+<a href="event_registerform.php">event_registerform.php</a>

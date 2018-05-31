@@ -27,6 +27,7 @@
       </nav>
       <div class="container">
          <div class="container">
+           <div class="mx-auto mt-5" style="width: 500px;">
             <div class="form-group">
                <div class="input-group mb-3"></div>
                <h1>Event Registration Form</h1>
@@ -73,6 +74,7 @@
                </form>
                <div class="input-group mb-3"></div>
             </div>
+          </div>
 
 
           </div>

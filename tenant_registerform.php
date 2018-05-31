@@ -37,24 +37,20 @@
                     <input type="text" class="form-control" id="exampleFormControlInput1">                                  <!-- input -->
                   </div>
                   <div class="form-group">
-                    <label for="exampleFormControlInput2">Email</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="name@example.com">  <!-- input -->
-                  </div>
-                  <div class="form-group">
                     <label for="exampleFormControlInput3">Nomor KTP</label>
                     <input type="text" class="form-control" id="exampleFormControlInput3">                                  <!-- input -->
                   </div>
                   <div class="form-group">
-                    <label for="exampleFormControlInput4">Alamat</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput4">                                  <!-- input -->
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleFormControlInput5">Domisili Kota</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput5">                                  <!-- input -->
+                    <label for="exampleFormControlInput3">Kota</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput3">                                  <!-- input -->
                   </div>
                   <div class="form-group">
                     <label for="exampleFormControlInput6">Nomor Telepon</label>
                     <input type="text" class="form-control" id="exampleFormControlInput6" rows="3"></input>                 <!-- input -->
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlInput2">Email</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="name@example.com">  <!-- input -->
                   </div>
                   <div class="form-group">
                     <label for="exampleFormControlTextarea1">Tentang Tenant</label>

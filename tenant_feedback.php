@@ -19,7 +19,7 @@
       <nav class="navbar navbar-dark bg-primary">
          <div class="container">
             <div class="navbar-header">
-               <a href="http://aufa.kuliahweb.net/note/note.php" class="navbar-brand">Note</a>
+               <a href="#" class="navbar-brand">EV</a>
             </div>
             <!--<img src="https://pbs.twimg.com/profile_images/966279862875926529/H1ZNhoaB_normal.jpg" alt="Account" class="rounded-circle"></img><-->
             <a href="logout.php"><button type="button" class="btn btn-danger">Sign Out</button></a>

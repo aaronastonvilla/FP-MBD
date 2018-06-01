@@ -22,7 +22,7 @@
                <a href="#" class="navbar-brand">EV</a>
             </div>
             <!--<img src="https://pbs.twimg.com/profile_images/966279862875926529/H1ZNhoaB_normal.jpg" alt="Account" class="rounded-circle"></img><-->
-            <a href="tenant_logout.php"><button type="button" class="btn btn-danger">Sign Out</button></a>
+            <a href="logout.php"><button type="button" class="btn btn-danger">Sign Out</button></a>
          </div>
       </nav>
       <div class="container">
@@ -41,6 +41,9 @@
              <div class="card" style="width: 18rem;">
 
                <div class="card-img-top text-white" style="background-color: #<?php echo random_color(); ?>;">
+
+
+                <!-- TENANT TITLE -->
                  <div class="card-body"><h5 class="card-title">Festival Rujak Surabaya</h5></div>
                </div>
                <!--<img class="card-img-top" src="https://www.picmonkey.com/blog/wp-content/uploads/2016/08/city-bokeh-resize.jpg" alt="Card image cap">-->
@@ -90,6 +93,43 @@
                 </div>
               </div>
 
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Jualan Aqua</h5>
+                  <p class="card-text">Beuh aqua di monopoli.</p>
+                  <p class="card-text"><small class="text-muted">3 out of 5 star</small></p>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Jualan Aqua</h5>
+                  <p class="card-text">Beuh aqua di monopoli.</p>
+                  <p class="card-text"><small class="text-muted">3 out of 5 star</small></p>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Jualan Aqua</h5>
+                  <p class="card-text">Beuh aqua di monopoli.</p>
+                  <p class="card-text"><small class="text-muted">3 out of 5 star</small></p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Jualan Aqua</h5>
+                  <p class="card-text">Beuh aqua di monopoli.</p>
+                  <p class="card-text"><small class="text-muted">3 out of 5 star</small></p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Jualan Aqua</h5>
+                  <p class="card-text">Beuh aqua di monopoli.</p>
+                  <p class="card-text"><small class="text-muted">3 out of 5 star</small></p>
+                </div>
+              </div>
 
             </div>
 

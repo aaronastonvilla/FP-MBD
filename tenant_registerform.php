@@ -38,7 +38,7 @@
                <h1>Tenant Registration Form</h1>
                <form action="" method="POST">
                   <div class="form-group">
-                    <label for="exampleFormControlInput1">Nama Penyewa</label>
+                    <label for="exampleFormControlInput1">Nama Produk</label>
                     <input name="nama" type="text" class="form-control" id="exampleFormControlInput1">                                  <!-- input -->
                   </div>
                   <div class="form-group">

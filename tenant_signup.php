@@ -1,4 +1,5 @@
 <?php
+  @session_start();
   include "db.php"
 ?>
 
@@ -26,7 +27,7 @@
                <a href="#" class="navbar-brand">EV</a>
             </div>
             <!--<img src="https://pbs.twimg.com/profile_images/966279862875926529/H1ZNhoaB_normal.jpg" alt="Account" class="rounded-circle"></img><-->
-            <a href="logout.php"><button type="button" class="btn btn-danger">Sign Out</button></a>
+            <a href="index.php"><button type="button" class="btn btn-danger">Back</button></a>
          </div>
       </nav>
       <div class="container">
@@ -71,6 +72,10 @@
                     }
                     else{
                       mysqli_query($db,"insert into tenant_login (tl_user, tl_pwd) values ('$user', '$pass')") or die ($db->error);
+                      $sql = mysqli_query($db,"select * from tenant_login where tl_user='$user'") or die ($db->error); 
+                      $data = mysqli_fetch_array($sql, MYSQLI_ASSOC);
+                      $_SESSION['tl_id'] = $data['tl_id'];
+                      header("location: tenant_registerform.php");
                     }
                   }
                 }

@@ -13,7 +13,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
       <script src="js.js"></script>
-      <title>Note by Aufa Wibowo</title>
+      <title>Give Feedback</title>
    </head>
    <body class="bg-light text-dark">
       <nav class="navbar navbar-dark bg-primary">
@@ -22,7 +22,7 @@
                <a href="#" class="navbar-brand">EV</a>
             </div>
             <!--<img src="https://pbs.twimg.com/profile_images/966279862875926529/H1ZNhoaB_normal.jpg" alt="Account" class="rounded-circle"></img><-->
-            <a href="logout.php"><button type="button" class="btn btn-danger">Sign Out</button></a>
+            <a href="index.php"><button type="button" class="btn btn-danger">Sign Out</button></a>
          </div>
       </nav>
       <div class="container">
@@ -58,7 +58,7 @@
                 <label for="exampleFormControlTextarea1">Komentar</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
               </div>
-              <a href="#" class="btn btn-primary">Submit</a>
+              <a href="tenant_main.php" class="btn btn-primary">Submit</a>
             </form>
         </div>
          <div class="container">

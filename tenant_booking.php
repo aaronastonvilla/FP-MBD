@@ -11,7 +11,7 @@
 				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 				<script src="js.js"></script>
-				<title>Note by Aufa Wibowo</title>
+				<title>Tenant Booking</title>
 			</head>
 			<body class="bg-light text-dark">
 				<nav class="navbar navbar-dark bg-primary">
@@ -20,8 +20,8 @@
 							<a href="#" class="navbar-brand">EV</a>
 						</div>
 						<!--<img src="https://pbs.twimg.com/profile_images/966279862875926529/H1ZNhoaB_normal.jpg" alt="Account" class="rounded-circle"></img><-->
-						<a href="logout.php">
-							<button type="button" class="btn btn-danger">Sign Out</button>
+						<a href="tenant_main.php">
+							<button type="button" class="btn btn-danger">Back</button>
 						</a>
 					</div>
 				</nav>
@@ -66,7 +66,7 @@
 								</ul>
 								<div class="card-body">
 									<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-									<a href="#" class="btn btn-primary">Ajukan Sewa</a>
+									<input name="booking" type="submit" class="btn btn-info" value="Ajukan Sewa">
 								</div>
 							</div>
 							<div class="card" style="width: 18rem;">
@@ -80,7 +80,7 @@
 								</ul>
 								<div class="card-body">
 									<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-									<a href="#" class="btn btn-primary">Ajukan Sewa</a>
+									<input name="booking" type="submit" class="btn btn-info" value="Ajukan Sewa">
 								</div>
 							</div>
 							<div class="card" style="width: 18rem;">
@@ -94,10 +94,19 @@
 								</ul>
 								<div class="card-body">
 									<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-									<a href="#" class="btn btn-primary">Ajukan Sewa</a>
+									<input name="booking" type="submit" class="btn btn-info" value="Ajukan Sewa">
 								</div>
 							</div>
 						</div>
+						<?php
+						$booking = @$_POST['booking'];
+		                if($booking){
+		                    ?>
+		                    <script type="text/javascript">alert("Berhasil Request Booking, Tunggu konfirmasi")</script> <!-- nyelipkan alert js -->
+		                    <?php
+		                }
+		                
+						?>
 					</div>
 				</div>
 			</div>

@@ -1,4 +1,5 @@
 <?php
+  @session_start();
   include "db.php"
 ?>
 
@@ -62,9 +63,10 @@
                     $data = mysqli_fetch_array($sql, MYSQLI_ASSOC);
                     $cek = mysqli_num_rows($sql);
                     if($cek>=1){
-                      ?>
-                      <script type="text/javascript">alert("Sukses Login")</script> <!-- nyelipkan alert js -->
-                      <?php  
+                      $tl_id = $data['tl_id'];
+                      $sql = mysqli_query($db,"select t_id from tenant where tl_id='$tl_id'") or die ($db->error); 
+                      $data = mysqli_fetch_array($sql, MYSQLI_ASSOC);
+                      $_SESSION['t_id'] = $data['t_id'];
                       header("location: tenant_main.php");
                     }
                     else{

@@ -1,4 +1,5 @@
 <?php
+  @session_start();
   include "db.php"
 ?>
 
@@ -61,9 +62,10 @@
                     $data = mysqli_fetch_array($sql, MYSQLI_ASSOC);
                     $cek = mysqli_num_rows($sql);
                     if($cek>=1){
-                      ?>
-                      <script type="text/javascript">alert("Sukses Login")</script> <!-- nyelipkan alert js -->
-                      <?php  
+                      $el_id = $data['el_id'];
+                      $sql = mysqli_query($db,"select e_id from event where el_id='$el_id'") or die ($db->error); 
+                      $data = mysqli_fetch_array($sql, MYSQLI_ASSOC);
+                      $_SESSION['e_id'] = $data['e_id'];
                       header("location: event_main.php");
                     }
                     else{

@@ -80,42 +80,20 @@
                            <div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
                               <div class="form-wrap">
                                  <div class="tab">
-                                    <ul class="tab-menu">
-                                       <li class="active gtco-first"><a href="#" data-tab="signup">Sign up</a></li>
-                                       <li class="gtco-second"><a href="#" data-tab="login">Login</a></li>
-                                    </ul>
                                     <div class="tab-content">
-                                       <div class="tab-content-inner active" data-content="signup">
-
-
-																				<a type="button" href="tenant_signup.php" class="btn btn-default">Tenant</a>
-																				<a type="button" href="event_signup.php" class="btn btn-default">Event</a>
-                                       </div>
-                                       <div class="tab-content-inner" data-content="login">
-																				<a type="button" href="tenant_login.php" class="btn btn-default">Tenant</a>
- 																				<a type="button" href="event_login.php" class="btn btn-default">Event</a>
+                                       <div class="tab-content-inner active" data-content="">
+															<a type="button" href="" class="btn btn-default">View</a>
+															<a type="button" href="" class="btn btn-default">Function</a>
+                                             <a type="button" href="" class="btn btn-default">Trigger</a>
+                                             <a type="button" href="" class="btn btn-default">Procedure</a>
+                                             <a type="button" href="" class="btn btn-default">Index</a>
+                                             <a type="button" href="" class="btn btn-default">Join</a>
+                                             <a type="button" href="" class="btn btn-default">Kursor</a>
                                        </div>
                                     </div>
                                  </div>
                               </div>
                            </div>
-                           <br><br><br>
-                           <div class="col-md-4 col-md-push-1 animate-box" data-animate-effect="fadeInRight">
-                              <div class="form-wrap">
-                                 <div class="tab">
-                                    <ul class="tab-menu">
-                                       <li class="gtco-second"><a href="#" data-tab="fp">FP MBD</a></li>
-                                    </ul>
-                                    <div class="tab-content">
-                                       <div class="tab-content-inner" data-content="fp">
-                                                            <a type="button" href="aldi.php" class="btn btn-default">Aldi-023</a>
-                                                            <a type="button" href="aufa.php" class="btn btn-default">Aufa-184</a>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-
                         </div>
                      </div>
                   </div>

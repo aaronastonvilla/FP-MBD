@@ -1,5 +1,5 @@
 <?php
-	$db = mysqli_connect("localhost", "root", "", "fpmbd_cadangan");
+	$db = mysqli_connect("localhost", "root", "", "fpmbd");
 	if($db->error)
 		echo $db->error;
 ?>

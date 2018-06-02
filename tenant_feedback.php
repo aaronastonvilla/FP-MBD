@@ -22,7 +22,7 @@
                <a href="#" class="navbar-brand">EV</a>
             </div>
             <!--<img src="https://pbs.twimg.com/profile_images/966279862875926529/H1ZNhoaB_normal.jpg" alt="Account" class="rounded-circle"></img><-->
-            <a href="index.php"><button type="button" class="btn btn-danger">Sign Out</button></a>
+            <a href="tenant_main.php"><button type="button" class="btn btn-danger">Back</button></a>
          </div>
       </nav>
       <div class="container">

@@ -27,7 +27,6 @@
                <a href="#" class="navbar-brand">EV</a>
             </div>
             <!--<img src="https://pbs.twimg.com/profile_images/966279862875926529/H1ZNhoaB_normal.jpg" alt="Account" class="rounded-circle"></img><-->
-            <a href="logout.php"><button type="button" class="btn btn-danger">Sign Out</button></a>
          </div>
       </nav>
       <div class="container">
@@ -38,7 +37,7 @@
                <h1>Tenant Registration Form</h1>
                <form action="" method="POST">
                   <div class="form-group">
-                    <label for="exampleFormControlInput1">Nama Penyewa</label>
+                    <label for="exampleFormControlInput1">Nama Produk</label>
                     <input name="nama" type="text" class="form-control" id="exampleFormControlInput1">                                  <!-- input -->
                   </div>
                   <div class="form-group">
@@ -80,7 +79,7 @@
                   }
                   else{
                     mysqli_query($db,"insert into tenant (tl_id, t_nama, t_ktp, t_kota, t_telp, t_email, t_deskripsi) values ('$tl_id', '$t_nama', '$t_ktp', '$t_kota', '$t_telp', '$t_email', '$t_deskripsi')") or die ($db->error);
-                    $sql = mysqli_query($db,"select * from tenant where t_nama='$t_nama'") or die ($db->error); 
+                    $sql = mysqli_query($db,"select t_id from tenant where t_nama='$t_nama'") or die ($db->error); 
                     $data = mysqli_fetch_array($sql, MYSQLI_ASSOC);
                     $_SESSION['t_id'] = $data['t_id'];
                     header("location: tenant_main.php");

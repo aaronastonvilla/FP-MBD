@@ -1,3 +1,8 @@
+<?php
+  @session_start();
+  include "db.php"
+?>
+
 <!doctype html>
 <html lang="en">
    <head>
@@ -26,10 +31,7 @@
          </div>
       </nav>
       <div class="container">
-         <div class="container">
-           <h1>Event Yang Tersedia</h1>
-
-            <div class="card-columns">
+        <h1>Event Yang Tersedia</h1>
              <?php
              function random_color_part() {
                return str_pad( dechex( mt_rand( 0, 255 ) ), 2, '0', STR_PAD_LEFT);
@@ -37,162 +39,53 @@
 
              function random_color() {
                  return random_color_part() . random_color_part() . random_color_part();
-             } ?>
-             <div class="card" style="width: 18rem;">
-
-               <div class="card-img-top text-white" style="background-color: #<?php echo random_color(); ?>;">
-
-
+             } ?>  
+                <?php
+                  $data_event = mysqli_query($db, "select * from event") or die ($db->error);
+                  while($data = mysqli_fetch_array($data_event, MYSQLI_ASSOC)){
+                ?>
+                <div class="container">
                 <!-- TENANT TITLE -->
-                 <div class="card-body"><h5 class="card-title">Festival Rujak Surabaya</h5></div>
-               </div>
-               <!--<img class="card-img-top" src="https://www.picmonkey.com/blog/wp-content/uploads/2016/08/city-bokeh-resize.jpg" alt="Card image cap">-->
-               <div class="card-body">
-                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-               </div>
-               <ul class="list-group list-group-flush">
-                 <li class="list-group-item">Jalan Pemuda</li>
-                 <li class="list-group-item"><a href="#">mail@festivalrujak.com</a></li>
-                 <li class="list-group-item">20 Januari 2018- 22 Januari 2018</li>
-               </ul>
-               <div class="card-body text-center">
-                 <a href="tenant_booking.php" class="btn btn-primary">Lihat Detail</a>
-                 <a href="tenant_feedback.php" class="btn btn-primary">Give Feddback</a>
-               </div>
-              </div>
-
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Kebab Turki Baba Rafi</h5>
-                  <p class="card-text">Event tepat waktu acara ramai cuma meme kurang banyak.</p>
-                  <p class="card-text"><small class="text-muted">3 out of 5 star</small></p>
+                <div class="card-columns">
+                  <div class="card" style="width: 18rem;">
+                   <div class="card-img-top text-white" style="background-color: #<?php echo random_color(); ?>;">
+                     <div class="card-body"><h5 class="card-title"><?php echo $data['e_nama']; ?></h5></div>
+                   </div>
+                   <!--<img class="card-img-top" src="https://www.picmonkey.com/blog/wp-content/uploads/2016/08/city-bokeh-resize.jpg" alt="Card image cap">-->
+                   <div class="card-body">
+                     <p class="card-text"><?php echo $data['e_deskripsi']; ?></p>
+                   </div>
+                   <ul class="list-group list-group-flush">
+                     <li class="list-group-item"><?php echo $data['e_lokasi']; ?></li>
+                     <li class="list-group-item"><a href="#"><?php echo $data['e_email']; ?></a></li>
+                     <li class="list-group-item"><?php echo $data['e_tglmulai']; ?> - <?php echo $data['e_tglselesai']; ?></li>
+                   </ul>
+                   <div class="card-body text-center">
+                     <?php
+                       $_SESSION['e_id'] = $data['e_id'];
+                     ?>
+                     <a href="tenant_booking.php" class="btn btn-primary">Lihat Detail</a>
+                     <a href="tenant_feedback.php" class="btn btn-primary">Give Feddback</a>
+                   </div>
+                  </div>
+                  <?php
+                  $e_id = $data['e_id'];
+                  $feedback = mysqli_query($db, "select t.t_nama, f.f_komentar, f.f_nilai from feedback f, tenant t where f.t_id = t.t_id and f.e_id = '$e_id' ") or die ($db->error);
+                  while($data2 = mysqli_fetch_array($feedback, MYSQLI_ASSOC)){
+                  ?>
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title"><?php echo $data2['t.t_nama']; ?></h5>
+                      <p class="card-text"><?php echo $data2['f.f_komentar']; ?></p>
+                      <p class="card-text"><small class="text-muted"><?php echo $data2['f.f_nilai']; ?> out of 5 star</small></p>
+                    </div>
+                  </div>
                 </div>
               </div>
-
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">McDonald Indonesia</h5>
-                  <p class="card-text">Ngikut apa kata orang aja.</p>
-                  <p class="card-text"><small class="text-muted">1 out of 5 star</small></p>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Pedagang Rujak Cingur</h5>
-                  <p class="card-text">Sepi dagangan saya.</p>
-                  <p class="card-text"><small class="text-muted">4 out of 5 star</small></p>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Jualan Aqua</h5>
-                  <p class="card-text">Beuh aqua di monopoli.</p>
-                  <p class="card-text"><small class="text-muted">3 out of 5 star</small></p>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Jualan Aqua</h5>
-                  <p class="card-text">Beuh aqua di monopoli.</p>
-                  <p class="card-text"><small class="text-muted">3 out of 5 star</small></p>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Jualan Aqua</h5>
-                  <p class="card-text">Beuh aqua di monopoli.</p>
-                  <p class="card-text"><small class="text-muted">3 out of 5 star</small></p>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Jualan Aqua</h5>
-                  <p class="card-text">Beuh aqua di monopoli.</p>
-                  <p class="card-text"><small class="text-muted">3 out of 5 star</small></p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Jualan Aqua</h5>
-                  <p class="card-text">Beuh aqua di monopoli.</p>
-                  <p class="card-text"><small class="text-muted">3 out of 5 star</small></p>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Jualan Aqua</h5>
-                  <p class="card-text">Beuh aqua di monopoli.</p>
-                  <p class="card-text"><small class="text-muted">3 out of 5 star</small></p>
-                </div>
-              </div>
-
-            </div>
-
-
-            <div class="card-columns mt-3">
-             <div class="card" style="width: 18rem;">
-
-               <div class="card-img-top text-white" style="background-color: #<?php echo random_color(); ?>;">
-                 <div class="card-body"><h5 class="card-title">Festival Rujak Surabaya</h5></div>
-               </div>
-               <!--<img class="card-img-top" src="https://www.picmonkey.com/blog/wp-content/uploads/2016/08/city-bokeh-resize.jpg" alt="Card image cap">-->
-               <div class="card-body">
-                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-               </div>
-               <ul class="list-group list-group-flush">
-                 <li class="list-group-item">Jalan Pemuda</li>
-                 <li class="list-group-item"><a href="#">mail@festivalrujak.com</a></li>
-                 <li class="list-group-item">20 Januari 2018- 22 Januari 2018</li>
-               </ul>
-               <div class="card-body text-center">
-                 <a href="tenant_booking.php" class="btn btn-primary">Lihat Detail</a>
-                 <a href="tenant_feedback.php" class="btn btn-primary">Give Feddback</a>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Kebab Turki Baba Rafi</h5>
-                  <p class="card-text">Event tepat waktu acara ramai cuma meme kurang banyak.</p>
-                  <p class="card-text"><small class="text-muted">3 out of 5 star</small></p>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">McDonald Indonesia</h5>
-                  <p class="card-text">Ngikut apa kata orang aja.</p>
-                  <p class="card-text"><small class="text-muted">1 out of 5 star</small></p>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Pedagang Rujak Cingur</h5>
-                  <p class="card-text">Sepi dagangan saya.</p>
-                  <p class="card-text"><small class="text-muted">4 out of 5 star</small></p>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Jualan Aqua</h5>
-                  <p class="card-text">Beuh aqua di monopoli.</p>
-                  <p class="card-text"><small class="text-muted">3 out of 5 star</small></p>
-                </div>
-              </div>
-
-
-            </div>
-
-
-         </div>
-         </div>
+              <?php
+                  }
+                }
+              ?>
       </div>
    </body>
 </html>

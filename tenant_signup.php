@@ -72,7 +72,7 @@
                     }
                     else{
                       mysqli_query($db,"insert into tenant_login (tl_user, tl_pwd) values ('$user', '$pass')") or die ($db->error);
-                      $sql = mysqli_query($db,"select * from tenant_login where tl_user='$user'") or die ($db->error); 
+                      $sql = mysqli_query($db,"select tl_id from tenant_login where tl_user='$user'") or die ($db->error); 
                       $data = mysqli_fetch_array($sql, MYSQLI_ASSOC);
                       $_SESSION['tl_id'] = $data['tl_id'];
                       header("location: tenant_registerform.php");

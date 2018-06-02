@@ -63,7 +63,8 @@
                     if($cek>=1){
                       ?>
                       <script type="text/javascript">alert("Sukses Login")</script> <!-- nyelipkan alert js -->
-                      <?php
+                      <?php  
+                      header("location: event_main.php");
                     }
                     else{
                       ?>
